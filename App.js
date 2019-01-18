@@ -20,7 +20,7 @@ export default class App extends Component<Props> {
     }
 
     fetchDataFromServer = () => {
-        fetch('http://172.22.10.206:8080/event/all')
+        fetch('http://192.168.1.44:8080/event/all')
             .then((response) => response.json())
             .then((responseJson) => {
 
@@ -38,7 +38,7 @@ export default class App extends Component<Props> {
 
     postDataToServer = () => {
         this.state = {isLoading: true};
-        fetch('http://172.22.10.206:8080/event/add', {
+        fetch('http://192.168.1.44:8080/event/add', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
